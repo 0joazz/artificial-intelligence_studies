@@ -31,14 +31,15 @@ const render = (ctx, predictions) => {
 }
 
 const App = () => {
-  const model = useModel(process.env.PUBLIC_URL + '/model_web')
-
+  const model = useModel('C:/Users/ferre/Desktop/Projects/artificial-intelligence_studies/IBM-object-detection-react/public/model_web')
+  console.log(model)
+  console.log('aaaa' + process.env.PUBLIC_URL)
   return (
     <div className="fillPage">
       <ObjectDetectionVideo
         model={model}
-        // onPrediction={handlePrediction}
-        // render={render}
+        onPrediction={handlePrediction}
+        render={render}
         // aspectFill: The option to scale the video to fill the size of the view.
         //             Some portion of the video may be clipped to fill the view's
         //             bounds.
